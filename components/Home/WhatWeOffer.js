@@ -1,6 +1,6 @@
 import Image from "next/image";
 import sfurs from "../../assets/sfurslayout.png";
-import { FiCheck } from "react-icons/fi";
+import flashcardaiBG from "../../assets/flashcardsailayout.png";
 
 export default function WhatWeOffer() {
   return (
@@ -108,7 +108,7 @@ export default function WhatWeOffer() {
               </div>
             </div>
             <div className="w-full h-auto xl:w-1/2 my-auto">
-              <Image src={sfurs} alt="web-design" />
+              <Image src={flashcardaiBG} alt="web-design" />
             </div>
           </div>
         </div>

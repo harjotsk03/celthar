@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="col-span-1 lg:col-span-2">
             <Image src={logo} alt="Celthar Logo" className="w-24 h-auto mb-4" />
-            <p className="text-black w-1/2 poppins-light text-sm max-w-md">
+            <p className="text-black lg:w-1/2 poppins-light text-sm max-w-md">
               We craft digital experiences that drive engagement and maximize
               conversions.
             </p>

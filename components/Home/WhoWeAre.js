@@ -20,49 +20,51 @@ export default function WhoWeAre() {
           Since day one, aligned with our core principles, we focus on:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full">
-          <div className=" p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaUserCheck />
             </div>
-            <h3 className="text-white text-xl poppins-regular">
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
               User-Focused Design
             </h3>
           </div>
-          <div className="bg-black/20 p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaMobileAlt />
             </div>
-            <h3 className="text-white text-xl poppins-regular">
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
               Mobile-First Approach
             </h3>
           </div>
-          <div className="bg-black/20 p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaChartLine />
             </div>
-            <h3 className="text-white text-xl poppins-regular">Scalability</h3>
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
+              Scalability
+            </h3>
           </div>
-          <div className="bg-black/20 p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaSitemap />
             </div>
-            <h3 className="text-white text-xl poppins-regular">
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
               Strong Information Architecture
             </h3>
           </div>
-          <div className="bg-black/20 p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaRocket />
             </div>
-            <h3 className="text-white text-xl poppins-regular">
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
               Post-Launch Growth Support
             </h3>
           </div>
-          <div className="bg-black/20 p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <div className="p-2 lg:p-6 rounded-2xl text-center flex flex-col items-center justify-center gap-4">
             <div className="text-blue-400 text-xl poppins-regular">
               <FaBullseye />
             </div>
-            <h3 className="text-white text-xl poppins-regular">
+            <h3 className="text-white text-base lg:text-xl poppins-regular">
               Brand Identity Alignment
             </h3>
           </div>

@@ -27,28 +27,31 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center gap-4 -ml-20 w-full justify-center">
+      <div className="hidden lg:flex items-center gap-4 w-full ml-10 justify-center">
         <div className="flex items-center gap-8 w-max rounded-full py-3 px-3 mx-auto justify-center bg-white">
-          <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
-            href="/about"
-          >
-            About
-          </Link>
           <Link
             className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
             href="/services"
           >
-            Services
+            Our Services
           </Link>
           <Link
             className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
             href="/contact"
           >
-            Contact
+            Our Work
+          </Link>
+          <Link
+            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
+            href="/about"
+          >
+            Our Team
           </Link>
         </div>
       </div>
+      <button className="hidden lg:block bg-blue-600 text-white w-max whitespace-nowrap px-4 lg:px-5 poppins-regular text-xs lg:text-sm py-2 lg:py-3 rounded-full h-max mr-10 mt-2 hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10">
+        Get in touch
+      </button>
 
       {/* Hamburger Menu Button */}
       <button
@@ -107,17 +110,17 @@ export default function Navbar() {
         <div className="flex flex-col p-4 gap-4">
           <Link
             className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
-            href="/about"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
             href="/services"
             onClick={() => setIsOpen(false)}
           >
             Services
+          </Link>
+          <Link
+            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
+            href="/about"
+            onClick={() => setIsOpen(false)}
+          >
+            About
           </Link>
           <Link
             className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
