@@ -13,7 +13,7 @@ export default function WhoWeHaveHelped() {
       <p className="text-black mt-4 text-sm text-center md:text-base poppins-light mb-8">
         Here are some of the projects we've worked on.
       </p>
-      <div className="w-3/4 mx-auto p-4 hover:-translate-y-2 transition-all duration-500 flex bg-gradient-to-t from-[#ffffff] to-[#E5E5E5] rounded-3xl flex-col md:flex-row">
+      <div className="w-3/4 mx-auto p-4 transition-all duration-500 flex bg-gradient-to-t from-[#ffffff] to-[#E5E5E5] rounded-3xl flex-col md:flex-row">
         <div className="w-full md:w-1/2 aspect-[4/3] relative">
           <Image
             src={SFURSBG}
@@ -55,7 +55,7 @@ export default function WhoWeHaveHelped() {
           </div>
         </div>
       </div>
-      <div className="w-3/4 mx-auto p-4 mt-10 hover:-translate-y-2 transition-all duration-500 flex bg-gradient-to-t from-[#ffffff] to-[#E5E5E5] rounded-3xl flex-col md:flex-row">
+      <div className="w-3/4 mx-auto p-4 mt-10 transition-all duration-500 flex bg-gradient-to-t from-[#ffffff] to-[#E5E5E5] rounded-3xl flex-col md:flex-row">
         <div className="w-full md:w-1/2 aspect-[4/3] relative">
           <Image
             src={studySpotrBG}

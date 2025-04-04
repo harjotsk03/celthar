@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import logo from "../assets/logofull.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,6 +22,11 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleEscKey);
   }, []);
 
+  // Helper function to determine if a link is active
+  const isActive = (path) => {
+    return pathname === path;
+  };
+
   return (
     <nav className="fixed w-full left-0 top-0 bg-[#E5E5E5] lg:bg-transparent lg:top-4 z-50 flex fade-in-down">
       <Link href="/" className="px-5 lg:px-10 py-5">
@@ -30,19 +37,31 @@ export default function Navbar() {
       <div className="hidden lg:flex items-center gap-4 w-full ml-10 justify-center">
         <div className="flex items-center gap-8 w-max rounded-full py-3 px-3 mx-auto justify-center bg-white">
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 rounded-full ${
+              isActive("/services")
+                ? "bg-blue-600/10 text-blue-600"
+                : "hover:text-blue-600 hover:bg-blue-600/10"
+            }`}
             href="/services"
           >
             Our Services
           </Link>
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 rounded-full ${
+              isActive("/contact")
+                ? "bg-blue-600/10 text-blue-600"
+                : "hover:text-blue-600 hover:bg-blue-600/10"
+            }`}
             href="/contact"
           >
             Our Work
           </Link>
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 hover:bg-blue-600/10 focus:bg-blue-600/10 focus:text-blue-600 focus:outline-none px-4 py-2 rounded-full"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 rounded-full ${
+              isActive("/about")
+                ? "bg-blue-600/10 text-blue-600"
+                : "hover:text-blue-600 hover:bg-blue-600/10"
+            }`}
             href="/about"
           >
             Our Team
@@ -109,21 +128,33 @@ export default function Navbar() {
         </div>
         <div className="flex flex-col p-4 gap-4">
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 ${
+              isActive("/services")
+                ? "text-blue-600 bg-blue-600/10"
+                : "hover:text-blue-600"
+            }`}
             href="/services"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 ${
+              isActive("/about")
+                ? "text-blue-600 bg-blue-600/10"
+                : "hover:text-blue-600"
+            }`}
             href="/about"
             onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <Link
-            className="poppins-regular text-sm hover:text-blue-600 transition-all duration-500 px-4 py-2"
+            className={`poppins-regular text-sm transition-all duration-500 px-4 py-2 ${
+              isActive("/contact")
+                ? "text-blue-600 bg-blue-600/10"
+                : "hover:text-blue-600"
+            }`}
             href="/contact"
             onClick={() => setIsOpen(false)}
           >
